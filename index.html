@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wheater App</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Pacifico&family=Titan+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="wrapper">
+
+        <div class="container">
+            <h1 class="heading">Wheater App</h1>
+
+            <div class="hero">
+                
+                <div class="side-card">
+                     <!-- 3-cards -->
+                     <div class="parameter-container">
+                        <!-- card-1 -->
+                        <div class="parameter">
+                            <img src="./assets/wind.png">
+                            <p>Windspeed</p>
+                            <p data-windspeed></p>
+                        </div>
+                        <!-- card-2 -->
+                        <div class="parameter">
+                            <img src="./assets/humidity.png">
+                            <p>Humidity</p>
+                            <p data-humidity=""></p>
+                        </div>
+        
+                          <!-- card-3 -->
+                          <div class="parameter">
+                            <img src="./assets/cloud.png">
+                            <p>Clouds</p>
+                            <p data-cloudiness></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="tab-container">
+                        <p class="tab" data-userWeather>Your Weather</p>
+                        <p class="tab" data-searchWeather="">Search Weather</p>
+                    </div>
+            
+                    <div class="weather-container"> 
+            
+                        <!-- grant location container -->
+                        <div class="grant-location-container">
+                            <img src="./assets/location.png" width="88" height="80" loading="lazy">
+                            <p>Grant Location Access</p>
+                            <p>Allow Access to get weather Information</p>
+                            <button class="btn" data-grantAccess="">Grant Access</button>
+                        </div>
+            
+                        <!-- Search form -->
+                        <form class="form-container" data-searchForm>
+                            <input type="text" placeholder="Search for City..." data-searchInput>
+                            <button class="btn1" type="submit"> 
+                                <img src="./assets/search.png" alt=""
+                                width="20" height="20" loading="lazy">
+                            </button>
+                        </form>
+            
+                        <!-- loading screen container -->
+                        <div class="loading-container">
+                            <img src="./assets/loading.gif" width="150" height="150" >
+                            <p>Loading</p>
+                        </div>
+            
+                        <!-- Show weather info -->
+                        <div class="user-info-container">
+                            <div class="name">
+                                <p data-cityName class="countryName"></p>
+                                <img data-countryIcon="">
+                            </div>
+                            <p data-temp class="tempData"><sup>°C</sup></p>
+                            <img data-weatherIcon class="weatheIcon">
+                            <p data-weatherDesc class="weatherDesc"></p>
+                           
+                        </div>
+
+                        <!-- error data not found -->
+                        <!-- <div class="data-error" data-error>
+                            <img src="./assets/error.png" alt="">
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+      
+        </div>
+
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
